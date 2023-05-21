@@ -1,16 +1,16 @@
 FROM node:lts-buster
 
-RUN sudo apt-get update
-Run sudo apt-get install ffmpeg -y
-Run sudo apt-get install imagemagick -y
-  Run sudo apt-get install webp -y
+RUN  apt-get update
+Run  apt-get install ffmpeg -y
+Run  apt-get install imagemagick -y
+  Run  apt-get install webp -y
  
- Run sudo apt-get upgrade -y 
-Run  sudo rm -rf /var/lib/apt/lists/*
+ Run  apt-get upgrade -y 
+Run   rm -rf /var/lib/apt/lists/*
 
 COPY package.json .
 Run npm install -g npm
-
+Run npm i
 RUN npm install && npm install qrcode-terminal
 
 COPY . .
